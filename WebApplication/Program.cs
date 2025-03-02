@@ -35,7 +35,7 @@ public class Program
                         ))
                     .ToArray();
 
-                //Imitate long running operation
+                //Imitate long-running operation
                 await Task.Delay(4000);
                 return forecast;
             })
