@@ -1,21 +1,21 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using WebApplication;
 
-namespace IntegrationTests;
+namespace IntegrationTests2;
 
-public class IntegrationTests
+public class IntegrationTests2
 {
     private readonly WebApplicationFactory<Program> _factory = new WebApplicationFactory<Program>();
     private readonly HttpClient _cleint;
 
-    public IntegrationTests()
+    public IntegrationTests2()
     {
         _cleint = _factory.CreateClient();
     }
     
     [Theory]
     [MemberData(nameof(EnumerableRange))]
-    public async Task WeatherForecast_ShouldNotBeEmpty(int number)
+    public async Task WeatherForecast_ShouldNotBeEmpty_2(int number)
     {
         var response = await _cleint.GetAsync("/weatherforecast");
         
@@ -27,7 +27,7 @@ public class IntegrationTests
 
     [Theory]
     [MemberData(nameof(EnumerableRange))]
-    public async Task WeatherForecast_ShouldNotBeWhiteSpace(int number)
+    public async Task WeatherForecast_ShouldNotBeWhiteSpace_2(int number)
     {
         var response = await _cleint.GetAsync("/weatherforecast");
         
@@ -39,7 +39,7 @@ public class IntegrationTests
     
     [Theory]
     [MemberData(nameof(EnumerableRange))]
-    public async Task WeatherForecast_ShouldBeArray(int number)
+    public async Task WeatherForecast_ShouldBeArray_2(int number)
     {
         var response = await _cleint.GetAsync("/weatherforecast");
         

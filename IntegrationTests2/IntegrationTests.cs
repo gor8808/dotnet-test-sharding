@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using WebApplication;
 
-namespace IntegrationTests;
+namespace IntegrationTests2;
 
 public class IntegrationTests
 {

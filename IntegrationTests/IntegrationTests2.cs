@@ -39,7 +39,7 @@ public class IntegrationTests2
     
     [Theory]
     [MemberData(nameof(EnumerableRange))]
-    public async Task WeatherForecast_ShouldNotBeArray_2(int number)
+    public async Task WeatherForecast_ShouldBeArray_2(int number)
     {
         var response = await _cleint.GetAsync("/weatherforecast");
         
