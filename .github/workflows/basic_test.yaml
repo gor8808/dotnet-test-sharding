@@ -3,7 +3,7 @@ name: Dotnet test with basic setup
 on: [workflow_dispatch]
 
 jobs:
-  build:
+  test-single:
     runs-on: ubuntu-latest
 
     steps:
