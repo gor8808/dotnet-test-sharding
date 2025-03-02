@@ -1,18 +1,15 @@
-name: dotnet package
+name: Dotnet test with basic setup
 
 on: [workflow_dispatch]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        dotnet-version: '8.0.x'
 
     steps:
       - uses: actions/checkout@v4
-      - name: Setup dotnet '8.0.x'
+      
+      - name: Setup dotnet
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8.0.x'
