@@ -11,9 +11,11 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.13" />
-        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0"/>
-        <PackageReference Include="xunit" Version="2.4.2"/>
-        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+        <PackageReference Include="Xunit.DependencyInjection.Logging" Version="10.0.0" />
+        <PackageReference Include="xunit.v3" Version="1.1.0" />
+        <PackageReference Include="Xunit.DependencyInjection" Version="10.2.1" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="3.0.2">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
             <PrivateAssets>all</PrivateAssets>
         </PackageReference>
@@ -24,7 +26,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <AssemblyAttribute Include="Xunit.AssemblyTrait">
+        <AssemblyAttribute Include="Xunit.TraitAttribute">
             <_Parameter1>Shard</_Parameter1>
             <_Parameter2>1</_Parameter2>
         </AssemblyAttribute>

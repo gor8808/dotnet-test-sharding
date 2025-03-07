@@ -1,16 +1,15 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using WebApplication;
 
-namespace IntegrationTests;
+namespace IntegrationTests2;
 
-public class IntegrationTests2
+public class IntegrationTestsCopy
 {
-    private readonly WebApplicationFactory<Program> _factory = new WebApplicationFactory<Program>();
     private readonly HttpClient _cleint;
 
-    public IntegrationTests2()
+    public IntegrationTestsCopy(IntegrationTestFixture fixture)
     {
-        _cleint = _factory.CreateClient();
+        _cleint = fixture.Factory.CreateClient();
     }
     
     [Theory]
