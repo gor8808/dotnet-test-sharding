@@ -36,7 +36,7 @@ public class Program
                     .ToArray();
 
                 //Imitate long-running operation
-                await Task.Delay(4000);
+                await Task.Delay(6000);
                 return forecast;
             })
             .WithName("GetWeatherForecast")

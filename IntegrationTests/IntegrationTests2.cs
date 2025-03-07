@@ -50,5 +50,5 @@ public class IntegrationTests2
         Assert.True(content.EndsWith(']'));
     }
     
-    public static object[][] EnumerableRange = Enumerable.Range(1, 20).Select(i => new object[] { i }).ToArray();
+    public static object[][] EnumerableRange = Enumerable.Range(1, 50).Select(i => new object[] { i }).ToArray();
 }
