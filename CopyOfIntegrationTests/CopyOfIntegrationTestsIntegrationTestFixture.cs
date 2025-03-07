@@ -3,13 +3,13 @@ using Microsoft.Extensions.DependencyInjection;
 using WebApplication;
 using Xunit.DependencyInjection.Logging;
 
-namespace IntegrationTests2;
+namespace CopyOfIntegrationTests;
 
-public class IntegrationTestFixture
+public class CopyOfIntegrationTestsIntegrationTestFixture
 {
     public readonly WebApplicationFactory<Program> Factory = new();
 
-    public IntegrationTestFixture()
+    public CopyOfIntegrationTestsIntegrationTestFixture()
     {
         Factory.WithWebHostBuilder(b => b.ConfigureServices(services =>
         {

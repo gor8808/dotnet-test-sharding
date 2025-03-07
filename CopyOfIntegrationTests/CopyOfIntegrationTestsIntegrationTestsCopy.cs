@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using WebApplication;
 
-namespace IntegrationTests2;
+namespace CopyOfIntegrationTests;
 
-public class IntegrationTestsCopy
+public class CopyOfIntegrationTestsIntegrationTestsCopy
 {
     private readonly HttpClient _cleint;
 
-    public IntegrationTestsCopy(IntegrationTestFixture fixture)
+    public CopyOfIntegrationTestsIntegrationTestsCopy(CopyOfIntegrationTestsIntegrationTestFixture fixture)
     {
         _cleint = fixture.Factory.CreateClient();
     }

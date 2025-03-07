@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{86F4A181-D5CD-40F9-A0EE-E7256D82BD51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests2", "IntegrationTests2\IntegrationTests2.csproj", "{ACD077FB-6E52-4267-B28C-D10856B52B69}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CopyOfIntegrationTests", "CopyOfIntegrationTests\CopyOfIntegrationTests.csproj", "{ACD077FB-6E52-4267-B28C-D10856B52B69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
