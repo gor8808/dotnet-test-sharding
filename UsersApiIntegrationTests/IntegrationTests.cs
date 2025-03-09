@@ -1,20 +1,17 @@
-using Microsoft.AspNetCore.Mvc.Testing;
-using WebApplication;
+namespace UsersApiIntegrationTests;
 
-namespace CopyOfIntegrationTests;
-
-public class CopyOfIntegrationTestsIntegrationTestsCopy
+public class IntegrationTests
 {
     private readonly HttpClient _cleint;
 
-    public CopyOfIntegrationTestsIntegrationTestsCopy(CopyOfIntegrationTestsIntegrationTestFixture fixture)
+    public IntegrationTests(IntegrationTestFixture fixture)
     {
         _cleint = fixture.Factory.CreateClient();
     }
     
     [Theory]
     [MemberData(nameof(EnumerableRange))]
-    public async Task WeatherForecast_ShouldNotBeEmpty_2(int number)
+    public async Task WeatherForecast_ShouldNotBeEmpty(int number)
     {
         var response = await _cleint.GetAsync("/weatherforecast");
         
@@ -26,7 +23,7 @@ public class CopyOfIntegrationTestsIntegrationTestsCopy
 
     [Theory]
     [MemberData(nameof(EnumerableRange))]
-    public async Task WeatherForecast_ShouldNotBeWhiteSpace_2(int number)
+    public async Task WeatherForecast_ShouldNotBeWhiteSpace(int number)
     {
         var response = await _cleint.GetAsync("/weatherforecast");
         
@@ -38,7 +35,7 @@ public class CopyOfIntegrationTestsIntegrationTestsCopy
     
     [Theory]
     [MemberData(nameof(EnumerableRange))]
-    public async Task WeatherForecast_ShouldBeArray_2(int number)
+    public async Task WeatherForecast_ShouldBeArray(int number)
     {
         var response = await _cleint.GetAsync("/weatherforecast");
         

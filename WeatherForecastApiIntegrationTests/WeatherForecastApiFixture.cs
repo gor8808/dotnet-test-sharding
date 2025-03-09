@@ -3,13 +3,13 @@ using Microsoft.Extensions.DependencyInjection;
 using WebApplication;
 using Xunit.DependencyInjection.Logging;
 
-namespace CopyOfIntegrationTests;
+namespace WeatherForecastApiIntegrationTests;
 
-public class CopyOfIntegrationTestsIntegrationTestFixture
+public class WeatherForecastApiFixture
 {
     public readonly WebApplicationFactory<Program> Factory = new();
 
-    public CopyOfIntegrationTestsIntegrationTestFixture()
+    public WeatherForecastApiFixture()
     {
         Factory.WithWebHostBuilder(b => b.ConfigureServices(services =>
         {

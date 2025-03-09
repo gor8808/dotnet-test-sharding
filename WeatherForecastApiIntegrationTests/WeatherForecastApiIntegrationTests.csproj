@@ -7,7 +7,12 @@
 
         <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
+        <RootNamespace>CopyOfIntegrationTests</RootNamespace>
     </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\WeatherForecastApi\WeatherForecastApi.csproj" />
+    </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.13" />
@@ -28,12 +33,8 @@
     <ItemGroup>
         <AssemblyAttribute Include="Xunit.TraitAttribute">
             <_Parameter1>Shard</_Parameter1>
-            <_Parameter2>1</_Parameter2>
+            <_Parameter2>2</_Parameter2>
         </AssemblyAttribute>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\WebApplication\WebApplication.csproj" />
     </ItemGroup>
 
 </Project>

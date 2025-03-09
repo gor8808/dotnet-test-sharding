@@ -1,7 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Xunit.DependencyInjection.Logging;
 
-namespace IntegrationTests;
+namespace UsersApiIntegrationTests;
 
 public class Startup
 {
