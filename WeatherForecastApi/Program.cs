@@ -24,7 +24,7 @@ public class Program
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        app.MapGet("/weatherforecast", async () =>
+        app.MapGet("/weatherforecast", () =>
             {
                 var forecast = Enumerable.Range(1, 5).Select(index =>
                         new WeatherForecast
@@ -35,8 +35,6 @@ public class Program
                         ))
                     .ToArray();
 
-                //Imitate long-running operation
-                await Task.Delay(2000);
                 return forecast;
             })
             .WithName("GetWeatherForecast")

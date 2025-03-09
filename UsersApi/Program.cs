@@ -19,7 +19,7 @@ public class Program
 
         app.UseHttpsRedirection();
 
-        app.MapGet("/users", async () =>
+        app.MapGet("/users", () =>
             {
                 var forecast = Enumerable.Range(1, 5).Select(index =>
                         new User
@@ -28,7 +28,6 @@ public class Program
                         ))
                     .ToArray();
 
-                await Task.Delay(2000);
                 return forecast;
             })
             .WithOpenApi();
