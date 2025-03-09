@@ -1,15 +1,14 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
-using WebApplication;
 using Xunit.DependencyInjection.Logging;
-
+using UsersApi;
 namespace UsersApiIntegrationTests;
 
-public class IntegrationTestFixture
+public class UsersApiFixture
 {
     public readonly WebApplicationFactory<Program> Factory = new();
 
-    public IntegrationTestFixture()
+    public UsersApiFixture()
     {
         Factory.WithWebHostBuilder(b => b.ConfigureServices(services =>
         {

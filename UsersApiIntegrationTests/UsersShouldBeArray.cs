@@ -1,19 +1,22 @@
-namespace WeatherForecastApiIntegrationTests;
+using Microsoft.AspNetCore.Mvc.Testing;
 
-public class WeatherForecastShouldBeArray 
+namespace UsersApiIntegrationTests;
+
+public class UsersShouldBeArray
 {
     private readonly HttpClient _cleint;
 
-    public WeatherForecastShouldBeArray(WeatherForecastApiFixture cases)
+    public UsersShouldBeArray(UsersApiFixture fixture)
     {
-        _cleint = cases.Factory.CreateClient();
+        _cleint = fixture.Factory.CreateClient();
     }
 
+    
     [Theory]
     [MemberData(nameof(EnumerableRange))]
-    public async Task WeatherForecast_ShouldBeArray(int number)
+    public async Task Users_ShouldBeArray(int number)
     {
-        var response = await _cleint.GetAsync("/weatherforecast");
+        var response = await _cleint.GetAsync("/users");
         
         response.EnsureSuccessStatusCode();
         

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
-using WebApplication;
+using WeatherForecastApi;
 using Xunit.DependencyInjection.Logging;
 
 namespace WeatherForecastApiIntegrationTests;
