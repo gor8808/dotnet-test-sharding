@@ -19,15 +19,16 @@ public class Program
 
         app.UseHttpsRedirection();
 
-        app.MapGet("/users", () =>
+        app.MapGet("/users", async () =>
             {
-
                 var forecast = Enumerable.Range(1, 5).Select(index =>
                         new User
                         (
                             index, $"User {index}", $"User {index}", Random.Shared.Next(1, 60)
                         ))
                     .ToArray();
+
+                await Task.Delay(2000);
                 return forecast;
             })
             .WithOpenApi();
