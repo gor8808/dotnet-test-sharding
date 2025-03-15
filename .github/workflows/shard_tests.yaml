@@ -57,7 +57,6 @@ jobs:
         if: ${{ success() || failure() }}
         with:
           files: ${{ env.TEST_RESULTS }}/**/*.trx
-          large_files: true
           check_name: "Test results"
           report_individual_runs: true
           action_fail: true
