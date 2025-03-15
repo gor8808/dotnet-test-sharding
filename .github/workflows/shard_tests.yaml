@@ -58,8 +58,9 @@ jobs:
         with:
           files: ${{ env.TEST_RESULTS }}/**/*.trx
           check_name: "Test results"
-          report_individual_runs: true
           action_fail: true
           time_unit: milliseconds
           compare_to_earlier_commit: false
+          log_level: DEBUG
+          root_log_level: DEBUG
       
