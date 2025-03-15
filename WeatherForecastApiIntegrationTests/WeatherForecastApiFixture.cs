@@ -13,7 +13,7 @@ public class WeatherForecastApiFixture
     {
         Factory.WithWebHostBuilder(b => b.ConfigureServices(services =>
         {
-            services.AddLogging(lb => lb.AddXunitOutput());
+            
         }));
         _ = Factory.Services; // Start application
     }
