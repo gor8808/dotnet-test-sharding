@@ -25,7 +25,7 @@ jobs:
         run: dotnet --version
 
       - name: Dotnet test
-        run: dotnet test ./dotnet-test-sharding.sln --filter Shard=${{ matrix.shards }} -c Release --results-directory 'artifacts/tests/output'
+        run: dotnet test ./dotnet-test-sharding.sln --filter Shard=${{ matrix.shards }} -c Release -l trx --results-directory 'artifacts/tests/output'
 
       - name: Set UUID
         if: ${{ success() || failure() }}
